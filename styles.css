@@ -1,0 +1,98 @@
+.calculator {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #333;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.display {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: right;
+    color: white;
+}
+
+.expression {
+    font-size: 1.2em;
+    min-height: 1.5em;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.result {
+    font-size: 2.5em;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.memory-buttons {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button[data-type="number"] {
+    background-color: #666;
+    color: white;
+}
+
+button[data-type="operator"] {
+    background-color: #ff9500;
+    color: white;
+}
+
+button[data-type="function"] {
+    background-color: #4a4a4a;
+    color: white;
+    font-size: 0.9em;
+}
+
+button[data-type="memory"] {
+    background-color: #a6a6a6;
+    color: white;
+}
+
+button[data-type="equals"] {
+    background-color: #ff9500;
+    color: white;
+    grid-column: span 2;
+}
+
+button[data-type="paren"] {
+    background-color: #4a4a4a;
+    color: white;
+}
+
+.error {
+    color: #ff4444;
+}
